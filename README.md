@@ -1,5 +1,5 @@
 # PINNs-Applications-in-Linear-Elastic-Solid-Mechanics
-##Abstract
+## Abstract
 PINN (Physics Informed Neural Network) is a deep learning based technique for solving PDEs 
 (partial differential equations), ODEs (oridnary differential equations) which are an integral
 part of engineering and computational sciences. It is guided by physical laws and data. It aims
@@ -35,15 +35,16 @@ This concept is used for second part of the study. A priori estimates for a nume
 of the numerical solution against the exact (very accurate reference solution)– converges. For sufficiently regular problems the following a priori estimates hold in the L2-norm, the H1-norm and the energy-norm A in the simulation domain B: 
 
 <p align="center">
-  <img width="" height="" src="images/apriori_eqn.png">
+  <img width="520" height="180" src="images/apriori_eqn.png">
 </p>
 
 # Parameter Identification 
+
 ## Problem
 The elasticity problem selected for the parameter identification study by PINN is an unit
 square element having constraints as shown in figure below. The origin lies at the bottom left
 corner of the element. This element is subjected to body forces in x and y direction as
-given by following equations.
+given by following equations. 
 
 <p align="center">
   <img width="" height="" src="images/para_ident_problem.png">
@@ -56,6 +57,7 @@ The loss function is calculated by following equation:
 </p>
 
 ## Results
+Lame parameter were identified with very high accuracy (0.002% for λ and 9.22E-04% for µ)
 <p align="center">
   <img width="" height="" src="images/converged_values.png">
 </p>
@@ -76,7 +78,10 @@ Following equations were used for L2 norm error calculation and energy norm erro
 </p>
 
 ## Result
-Softplus performs better than all other activation functions studied.
+After comparison of several activation functions on the basis of convergence order, better fit of power laws,
+minimum loss value and training time, Softplus performed best in all these aspects while
+ELU performed worst in training time and minimum loss value.
+
 <p align="center">
   <img width="" height="" src="images/act_fn_comparison.png">
 </p>
@@ -89,8 +94,28 @@ Softplus performs better than all other activation functions studied.
   <img width="" height="" src="images/softplus_convergence.png">
 </p>
 
+# Repo structure
 
+* Parameter_ident : contains code for 16X16 grid size and weight folder for trained weights. Grid size can be customized for amy other values.
+* Activation_fun_comparison : Contain primary code with two other folders called gnuplot_data (code and data for plotting convergence gnuplots) and weights (contain trained weights). To learn more about gnuplots click [here](http://www.gnuplot.info/).
 
+## Installing requirements
+
+Please install the required python packages as noted in the ```requirements.txt```. We recommend using ```pip``` by running:
+
+```
+pip install -r requirements.txt
+```
+
+# Refernces
+
+[1] SciANN Documentation., year = 2021, url = https://www.sciann.com, urldate = 2021-
+12-14.
+
+[2] E. Haghighat and R. Juanes. Sciann: A keras/tensorflow wrapper for scientific computations and physics-informed deep learning using artificial neural networks. Computer Methods in Applied Mechanics and Engineering, 373:113552, 2021.
+
+[3] E. Haghighat, M. Raissi, A. Moure, H. Gomez, and R. Juanes. A deep learning
+framework for solution and discovery in solid mechanics, 2020.
 
 
 
