@@ -99,13 +99,6 @@ ELU performed worst in training time and minimum loss value.
 * Parameter_ident : contains code for 16X16 grid size and weight folder for trained weights. Grid size can be customized for amy other values.
 * Activation_fun_comparison : Contain primary code with two other folders called gnuplot_data (code and data for plotting convergence gnuplots) and weights (contain trained weights). To learn more about gnuplots click [here](http://www.gnuplot.info/).
 
-## Installing requirements
-
-Please install the required python packages as noted in the ```requirements.txt```. We recommend using ```pip``` by running:
-
-```
-pip install -r requirements.txt
-```
 
 # Refernces
 
