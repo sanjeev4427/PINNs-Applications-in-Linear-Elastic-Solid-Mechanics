@@ -1,0 +1,1 @@
+# PINNs-Applications-in-Linear-Elastic-Solid-Mechanics
