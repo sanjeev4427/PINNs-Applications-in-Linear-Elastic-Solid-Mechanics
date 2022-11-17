@@ -13,9 +13,7 @@ This project is divided in a two parts. In first study, Lame parameters are iden
 using tanh activation function. After that, six activation functions are analysed on the basis
 of minimum loss, training time and convergence order for different error norms. In this study
 softplus activation function performs best while elu (another activation function) performs
-worst. Finally, a planar square plate is studied to find Lame parameters and convergence orders
-for different error norms using softplus activation function. Since the actual solution data is not
-available it was solved using Abaqus software.
+worst. 
 
 ## PINN
 Physics Informed Neural Network (PINN) is a different class of Artificial Neural Network
